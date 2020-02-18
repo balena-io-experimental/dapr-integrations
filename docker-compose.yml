@@ -1,0 +1,20 @@
+version: '2.1'
+volumes:
+    resin-data: {}
+services:
+    Sensor:
+        build: Sensor
+        privileged: true
+        tty: true
+        restart: always
+        network_mode: host
+        volumes:
+            - 'resin-data:/data'
+    Storage:
+        build: Storage
+        ports: 
+            - 3000:3000
+        privileged: true
+        restart: "no"
+        network_mode: host
+    

@@ -1,0 +1,21 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: rabbit
+spec:
+  type: pubsub.rabbitmq
+  metadata:
+    - name: host
+      value: amqp://rwljtwnm:ZAg5myfjnyYRBg3_8wpn06wLW-Z6PFqC@crow.rmq.cloudamqp.com/rwljtwnm #amqp://guest:guest@RabbitMQ:5672
+    - name: consumerID
+      value: sensor
+    - name: durable
+      value: true
+    - name: deletedWhenUnused
+      value: false
+    - name: autoAck
+      value: false
+    - name: deliveryMode
+      value: 0 # Optional. Default: "0". Values between 0 - 2.
+    - name: requeueInFailure
+      value: false

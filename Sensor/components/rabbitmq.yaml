@@ -6,7 +6,7 @@ spec:
   type: pubsub.rabbitmq
   metadata:
     - name: host
-      value: amqp://rwljtwnm:ZAg5myfjnyYRBg3_8wpn06wLW-Z6PFqC@crow.rmq.cloudamqp.com/rwljtwnm #amqp://guest:guest@RabbitMQ:5672
+      value: amqp://guest:guest@RabbitMQ:5672
     - name: consumerID
       value: sensor
     - name: durable
